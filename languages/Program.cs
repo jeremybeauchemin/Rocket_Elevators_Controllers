@@ -16,6 +16,7 @@ namespace RocketElevators
            this.nbButtons = nbButtons;
            this.columns = new Columns(nbFloors, nbElevators);
        }
+       //la demande d'ascenceur
        public Elevator RequestElevator(int FloorNumber, string Direction) {
             selectedElevator = this.FindElevator(FloorNumber, Direction);
             selectedElevator.addFloorToList(FloorNumber);
@@ -23,13 +24,14 @@ namespace RocketElevators
             Console.WriteLine("Request Elevator on floor " + FloorNumber.ToString() + ", going " + Direction);
             return selectedElevator;
         }
+        //l'interieur
         public void RequestFloor( int elevator, int floorNumber) {
             elevator.activateInsideButton(floorNumber);
             elevator.addFloorToList(floorNumber);
             elevator.moveNext();
             Console.WriteLine("Request Floor number " + floorNumber.ToString());
         }
-
+        //trouver l'ascenceur
         public int FindElevator( int FloorNumber, string Direction){
             var Elevator;
             while (Elevator == undefined) {
@@ -37,10 +39,16 @@ namespace RocketElevators
                     let currentElevator = this.elevator[i];
                     if (
                         this.currentElevator.status == "stopped" &&
-                        this.currentElevator.direction == "up" &&
                         this.currentElevator.direction == Direction
                     ) {
-                        Console.WriteLine();
+                        Console.WriteLine(this.currentElevator[i]);
+                        Elevator = this.currentElevator[i];
+                        return this.currentElevator[i];
+                    }
+                    else if (this.currentElevator[i].status =="idle") {
+                        Console.WriteLine(this.currentElevator[i]);
+                        Elevator = this.currentElevator[i];
+                        return this.currentElevator[i];
                     }
                 }
             }
