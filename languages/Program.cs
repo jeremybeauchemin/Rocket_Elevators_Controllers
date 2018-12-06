@@ -96,7 +96,7 @@ namespace RocketElevators
             Console.WriteLine(FloorList);
 
         }
-    }
+    }   
 
     //les portes
    class Door
