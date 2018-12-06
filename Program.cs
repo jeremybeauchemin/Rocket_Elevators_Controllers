@@ -1,6 +1,14 @@
 ﻿using System;
 namespace RocketElevators
 {
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+        }
+    }
     //debut de l'ascenceur
    class ElevatorController
    {
@@ -32,7 +40,8 @@ namespace RocketElevators
             Console.WriteLine("Request Floor number " + floorNumber.ToString());
         }
         //trouver l'ascenceur
-        public int FindElevator( int FloorNumber, string Direction){
+        public int FindElevator( int FloorNumber, string Direction)
+        {
             var Elevator;
             while (Elevator == undefined) {
                 for (var i = 0; i < this.currentElevator; i++){
@@ -50,7 +59,6 @@ namespace RocketElevators
                         Elevator = this.currentElevator[i];
                         return this.currentElevator[i];
                     }
-                }
                 else if (FloorNumber > this.currentElevator[i].current_floor){
                     if (
                         this.currentElevator.status == "moving" &&
@@ -69,7 +77,9 @@ namespace RocketElevators
                     }
                     else if (FloorNumber < this.currentElevator[i].current_floor){
                         if (this.currentElevator[i].status == "moving" &&
-                        this.currentElevator[i].direction == "down")
+                        this.currentElevator[i].direction == "down") {
+                            
+                        }
                     }
                     if (this.currentElevator[i].direction == Direction){
                         Console.WriteLine(this.currentElevator[i]);
@@ -87,26 +97,28 @@ namespace RocketElevators
                      }
                  }
             }
-        public FloorList(int Elevator, int floorNumber){
+        }
+        public void FloorList(int Elevator, int floorNumber)
+        {
             Elevator.Floor_List.push(Number_Of_Floor);
-            Elevator.Floor_List.sort();
+            Elevator.Floor_List.sort();s
             if (Elevator == up) Elevator.Floor_List.sort;
         }
-        SortFloorList(FloorList){
+        public void SortFloorList(string FloorList)
+        {
             Console.WriteLine(FloorList);
-
         }
     }   
 
-    //les portes
+    //les porte
    class Door
    {
-        public openDoor(){
+        public void openDoor(){
 
             Console.WriteLine("Opening door on floor " + this.current_floor);
             this.status = "open_door";
          }
-        public closeDoor(){
+        public void closeDoor(){
              Console.WriteLine("Closing door on floor " + this.current_floor);
             this.status = "close_door";
         }    
@@ -123,7 +135,7 @@ namespace RocketElevators
        private int Close_Door_Button;
        private int FloorNumber;
 
-       public MoveDown(int FloorNumber){
+       public void MoveDown(int FloorNumber){
            elevator.direction;
         }   
     }

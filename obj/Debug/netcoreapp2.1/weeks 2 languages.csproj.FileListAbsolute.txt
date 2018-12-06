@@ -1,0 +1,4 @@
+C:\Users\jbeau\weeks 2 languages\obj\Debug\netcoreapp2.1\weeks 2 languages.csprojAssemblyReference.cache
+C:\Users\jbeau\weeks 2 languages\obj\Debug\netcoreapp2.1\weeks 2 languages.csproj.CoreCompileInputs.cache
+C:\Users\jbeau\weeks 2 languages\obj\Debug\netcoreapp2.1\weeks 2 languages.AssemblyInfoInputs.cache
+C:\Users\jbeau\weeks 2 languages\obj\Debug\netcoreapp2.1\weeks 2 languages.AssemblyInfo.cs

@@ -1,0 +1,14 @@
+{
+  "ProjectFilePath": "c:\\Users\\jbeau\\weeks 2 languages\\weeks 2 languages.csproj",
+  "TargetFramework": "netcoreapp2.1",
+  "TagHelpers": [],
+  "Configuration": {
+    "ConfigurationName": "UnsupportedRazor",
+    "LanguageVersion": "1.0",
+    "Extensions": [
+      {
+        "ExtensionName": "UnsupportedRazorExtension"
+      }
+    ]
+  }
+}
