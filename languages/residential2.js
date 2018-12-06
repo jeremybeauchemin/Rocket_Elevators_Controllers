@@ -37,12 +37,14 @@ class ElevatorController {
             console.log(this.currentElevator[i]);
             Elevator = this.currentElevator[i];
             return this.currentElevator[i];
-          } else if (this.currentElevator[i].status == "idle") {
+          } 
+          else if (this.currentElevator[i].status == "idle") {
             console.log(this.currentElevator[i]);
             Elevator = this.currentElevator[i];
             return this.currentElevator[i];
           }
-        } else if (Number_OF_Floor > this.currentElevator[i].current_floor) {
+        } 
+        else if (Number_OF_Floor > this.currentElevator[i].current_floor) {
           if (
             this.currentElevator.status == "moving" &&
             this.currentElevator.direction == "up" &&

@@ -51,6 +51,24 @@ namespace RocketElevators
                         return this.currentElevator[i];
                     }
                 }
+                else if (FloorNumber > this.currentElevator[i].current_floor){
+                    if (
+                        this.currentElevator.status == "moving" &&
+                        this.currentElevator.direction =="up" &&
+                        this.currentElevator.direction == Direction
+                    )
+                    {
+                        Console.WriteLine(this.currentElevator);
+                        Elevator = this.currentElevator;
+                        return Elevator;
+                    }
+                    else if (this.currentElevator.status == "moving"){
+                        Console.WriteLine(this.currentElevator[i]);
+                        Elevator = this.currentElevator;
+                        return Elevator;
+                    }
+                    else if
+                }
             }
         }
    }
