@@ -67,11 +67,36 @@ namespace RocketElevators
                         Elevator = this.currentElevator;
                         return Elevator;
                     }
-                    else if
-                }
+                    else if (FloorNumber < this.currentElevator[i].current_floor){
+                        if (this.currentElevator[i].status == "moving" &&
+                        this.currentElevator[i].direction == "down")
+                    }
+                    if (this.currentElevator[i].direction == Direction){
+                        Console.WriteLine(this.currentElevator[i]);
+                        Elevator = this.currentElevator[i];
+                        return Elevator;
+                    }
+                    else if (this.currentElevator[i].status == "moving") {
+                    Console.WriteLine(this.currentElevator[i]);
+                    Elevator = this.currentElevator[i];
+                    return Elevator;    
+                    }
+                    else {
+                        Console.WriteLine(this.currentElevator[i]);
+                          }
+                     }
+                 }
             }
+        public FloorList(int Elevator, int floorNumber){
+            Elevator.Floor_List.push(Number_Of_Floor);
+            Elevator.Floor_List.sort();
+            if (Elevator == up) Elevator.Floor_List.sort;
         }
-   }
+        SortFloorList(FloorList){
+            Console.WriteLine(FloorList);
+
+        }
+    }
 
     //les portes
    class Door
@@ -81,7 +106,7 @@ namespace RocketElevators
             Console.WriteLine("Opening door on floor " + this.current_floor);
             this.status = "open_door";
          }
-        public void closeDoor(){
+        public closeDoor(){
              Console.WriteLine("Closing door on floor " + this.current_floor);
             this.status = "close_door";
         }    
@@ -103,3 +128,4 @@ namespace RocketElevators
         }   
     }
 }
+
