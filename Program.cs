@@ -26,11 +26,11 @@ namespace RocketElevators
        }
        //la demande d'ascenceur
        public Elevator RequestElevator(int FloorNumber, string Direction) {
-            selectedElevator = this.FindElevator(FloorNumber, Direction);
-            selectedElevator.addFloorToList(FloorNumber);
-            selectedElevator.activateInsideButton(FloorNumber);
+            RequestElevator = this.FindElevator(FloorNumber, Direction);
+            RequestElevator.addFloorToList(FloorNumber);
+            RequestElevator.activateInsideButton(FloorNumber);
             Console.WriteLine("Request Elevator on floor " + FloorNumber.ToString() + ", going " + Direction);
-            return selectedElevator;
+            return RequestElevator;
         }
         //l'interieur
         public void RequestFloor( int elevator, int floorNumber) {
